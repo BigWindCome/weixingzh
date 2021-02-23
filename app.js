@@ -7,6 +7,7 @@ var db = require('./db/connect')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var xhfjlRouter = require('./routes/xhfjl');
 
 var app = express();
 
@@ -18,5 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/xhfjl', xhfjlRouter);
 
 module.exports = app;
